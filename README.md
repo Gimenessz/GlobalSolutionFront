@@ -37,5 +37,5 @@ Com dashboards intuitivos e relatórios detalhados, o SmartFlood ajuda no planej
 1. **Clone o repositório**
 
 ```bash
-git clone https://github.com/seu-usuario/smartflood.git
+git clone https://github.com/seu-usuario/smartflood.git](https://github.com/Gimenessz/GlobalSolutionFront.git
 cd smartflood
