@@ -1,0 +1,307 @@
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset e fonte */
+body {
+  margin: 0;
+  font-family: 'Chivo Mono', monospace;
+  background-color: #1a1a1a; /* fundo escuro */
+  color: #e0e0e0; /* texto claro */
+}
+
+/* Header fixo com cinza escuro */
+.header-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #222222; /* cinza escuro */
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+/* Logo */
+.logoicon img {
+  height: 50px;
+}
+
+/* Menu do header */
+.header-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.header-menu a {
+  color: #cccccc; /* cinza claro */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header-menu a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Ajuste para compensar header fixo (top padding para body) */
+body > main,
+body > section,
+body > footer {
+  padding-top: 80px; /* altura do header + margem */
+}
+
+/* BG image com filtro escuro */
+.bg-image {
+  position: relative;
+  z-index: 0;
+  background: url('../images/Regiao-Metropolitana-de-Porto-Alegre-afetada-por-chuvas-e-enchentes-do-rio-Guaiba-1.jpg') no-repeat center center / cover;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  pointer-events: none; 
+}
+
+.bg-image > * {
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 10ch;
+  margin: 0;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Containers fluidos principais */
+.container-fluid.bg-white {
+  background-color: #333333 !important; /* cinza escuro */
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
+  color: #f0f0f0;
+}
+
+/* Textos principais */
+h2, h3, h4, h5 {
+  color: #f0f0f0;
+}
+
+h2, h3 {
+  font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Imagens fluidas e arredondadas */
+img.img-fluid {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Video container */
+.video-container video {
+  border-radius: 12px;
+}
+
+/* Container carrossel das ajudas */
+#ajudas {
+  background-color: #2a2a2a !important; /* cinza escuro */
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.7);
+  margin-bottom: 3rem;
+  color: #ddd;
+}
+
+/* Cards dentro do carrossel */
+.help-card {
+  min-height: 180px;
+  background-color: #444444;
+  color: #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.4);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.help-card h5 {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.help-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0;
+}
+
+/* Botões de controle do carrossel com ícones invertidos para visibilidade */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Ajuste de posição dos botões para ficar um pouco mais afastado */
+.carousel-control-prev {
+  left: -40px;
+}
+
+.carousel-control-next {
+  right: -40px;
+}
+
+/* Formulário de dúvidas */
+#form-duvidas {
+  background-color: #333333;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 2rem auto 4rem auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
+  color: #eee;
+}
+
+#form-duvidas label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+#form-duvidas input,
+#form-duvidas textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #555555;
+  color: #eee;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 1rem;
+}
+
+#form-duvidas input::placeholder,
+#form-duvidas textarea::placeholder {
+  color: #bbb;
+}
+
+#form-duvidas button {
+  background-color: #222222;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#form-duvidas button:hover {
+  background-color: #444444;
+}
+
+/* Footer */
+footer {
+  background-color: #222222;
+  color: #cccccc;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}
+
+/* Header menu responsivo básico */
+@media (max-width: 768px) {
+  .header-page {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+ #ajudaCarousel .carousel-inner {
+  display: flex;
+  overflow: hidden;
+  gap: 1.5rem;
+  scroll-behavior: smooth;
+}
+
+#ajudaCarousel .carousel-item {
+  min-width: 45%; /* mostra dois cards lado a lado */
+  flex-shrink: 0;
+  box-sizing: border-box;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+/* Botões fora do conteúdo */
+#ajudaCarousel .carousel-control-prev {
+  left: -50px;
+  width: 40px;
+}
+
+#ajudaCarousel .carousel-control-next {
+  right: -50px;
+  width: 40px;
+}
+
+#ajudaCarousel .carousel-control-prev-icon,
+#ajudaCarousel .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Mobile - um card por vez */
+@media (max-width: 768px) {
+  #ajudaCarousel .carousel-item {
+    min-width: 90%;
+  }
+}
+
+}
+
+
+
+
